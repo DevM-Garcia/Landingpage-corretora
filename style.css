@@ -22,6 +22,7 @@
     --cinza: #4D5359;
     --cinza-claro: #A6A6A6;
     --cinza-escuro: #222426;
+    --amarelo: rgb(235, 119, 36);
 }
 
 html {
@@ -30,149 +31,132 @@ html {
 
 body {
     font-family: var(--font);
+    background: var(--cor-font);
+    background: linear-gradient(170deg, hsl(0, 0%, 22%) 0%, hsl(0, 0%, 6%) 30%);
 }
 
-.container-cabecalho {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    background-color: var(--bg);
+/* classes reusaveis */
+.container {
+    max-width: 1300px;
+    padding: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
+
+/* header nav */
 
 header {
-    max-width: 1100px;
-    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 999;
+    transition: 4.s;
+}
+
+.nav {
+    height: 8vh;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 30px 10px;
+    align-items: center;
 }
 
 .logo {
-    display: flex;
-    gap: 0.5rem;
+    display: inline-flex;
+    color: #fff;
     align-items: center;
-    font-weight: 600;
-    font-size: 2rem;
-    font-family: var(--font-alternativa);
-}
-
-.logo i {
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--cinza);
-}
-
-.lista {
-    display: flex;
-    gap: 2rem;
-}
-
-.lista a {
-    color: var(--cinza-escuro);
+    gap: 0.25rem;
     font-weight: 500;
-    transition: all 0.4s ease;
-}
-
-.lista a:hover {
-    color: var(--cinza-claro);
-}
-
-.btn-mobile i {
-    cursor: pointer;
-    font-size: 1.5rem;
-    display: none;
-}
-
-/* inicio */
-
-
-.inicio {
-    background: var(--bg)
-}
-
-.banner {
-    margin-top: 1rem;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 5rem;
-    gap: 5rem;
-}
-
-.campo-texto {
-    position: relative;
-    bottom: 90px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.campo-texto h2 {
-    font-family: var(--font-alternativa);
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-.campo-texto h2 i {
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--cinza);
-}
-
-.img {
-    width: 50%;
-}
-
-.img img {
-    position: relative;
-    bottom: 90px;
-}
-
-.buttons {
-    width: 100%;
-    display: flex;
-    padding: 1rem;
-    gap: 1rem;
-    align-items: center;
-}
-
-.buttons p {
-    font-family: var(--font-alternativa);
-    font-size: 1.8rem;
-}
-
-.btn-confira {
-    border: none;
-    background: rgb(93, 70, 207);
-    padding: 0.8rem;
-    border-radius: 6px;
-    cursor: pointer;
-    color: var(--bg);
-    transition: all ease .4s;
-}
-
-.btn-confira:hover {
-    background: rgba(93, 70, 207, 0.775);
-}
-
-.btn-ctt {
-    padding: 0.8rem;
-    border-radius: 6px;
-    color: var(--cinza);
-    cursor: pointer;
-    border: 1px solid var(--cinza-claro);
     transition: .4s;
 }
 
-.btn-ctt:hover {
-    background: var(--cinza-claro);
-    color: aliceblue;
+.logo i {
+    font-size: 1.3rem;
 }
 
-/* imoveis */
+.logo:hover {
+    color: var(--cinza-claro);
+}
 
-.imoveis {}
+.lista-header {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.lista-header a {
+    color: var(--cinza-claro);
+    transition: .4s;
+}
+
+.lista-header a:hover {
+    color: var(--cinza);
+}
+
+.btn-menu {
+    display: none;
+}
+
+.btn-menu i {
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/*=============== HOME ===============*/
+.home {
+    padding-bottom: 0;
+    height: 92vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+}
+
+.home-container {
+    display: flex;
+}
+
+.home-text {
+    position: relative;
+    margin-top: 5rem;
+    color: #fff;
+}
+
+.home-text h1 {
+
+    font-size: 64px;
+    line-height: 120%;
+    margin-bottom: 1.25rem;
+    width: 80%;
+}
+
+.home-text p {
+    font-size: 16px;
+    color: var(--cinza-claro);
+    margin-bottom: 1.25rem;
+}
+
+.home-number {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-number h1 {
+    font-size: 36px;
+}
+
+.home-number span {
+    color: var(--amarelo);
+}
+
+.home-number .desciption {
+    color: #fff;
+    font-family: var(--font-alternativa);
+    font-size: 1.2rem;
+}
+
+.casa {
+    background-color: #fff;
+}
